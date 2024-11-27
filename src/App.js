@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-      <Time nome="" />
+      <Time nome="Escola de Programação" />
     </div>
   );
 }
