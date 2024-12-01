@@ -1,14 +1,15 @@
 import Colaborador from '../Colaborador'
 import './Time.css'
+import hexToRgba from 'hex-to-rgba';
 
 const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
     return (
         colaboradores.length > 0 && <section 
             className='time' 
-            style={{ backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: time.corPrimaria }}>
+            style={{ backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: hexToRgba(time.cor, '0.2') }}>
 
                 <input 
-                    onChange={evento => mudarCor(evento.target.value, time.nome)} 
+                    onChange={evento => mudarCor(evento.target.value, time.id)} 
                     value={time.corPrimaria} 
                     type='color' 
                     className='input-cor' />
